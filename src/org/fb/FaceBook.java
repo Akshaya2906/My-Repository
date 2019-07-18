@@ -1,0 +1,38 @@
+package org.fb;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+
+public class FaceBook {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Akshaya-PC\\eclipse-workspace\\SeleniumProject\\driver\\chromedriver.exe");
+        
+		WebDriver driver =new ChromeDriver();
+		 
+		driver.get("https://www.facebook.com");
+		
+		//To find the locator of username
+		
+		WebElement txtUser = driver.findElement(By.id("email"));
+		
+		// to insert the value
+		        txtUser.sendKeys("JAVA");
+		        
+		// To find the locator password
+		        
+		  WebElement txtPswrd = driver.findElement(By.id("pass"));
+		  
+		  // to insert the value
+		  
+		       txtPswrd.sendKeys("Password");
+		   
+		   //driver.quit();
+		
+	}
+
+}
+ 
